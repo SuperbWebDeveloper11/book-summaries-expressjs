@@ -1,0 +1,17 @@
+<h2 class="text-capitalize">all summaries</h2>
+<div class="row">
+  {{#each summaries}}
+    <div class="card mb-1">
+      <div class="card-header">
+        {{title}}
+      </div>
+      <div class="card-body">
+        <p class="card-text">{{quickDescription}}</p>
+        <a href="/summaries/{{_id}}/" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+
+  {{else}}
+    <p class="text-capitalize">No summaries to display</p>
+  {{/each}}
+</div>

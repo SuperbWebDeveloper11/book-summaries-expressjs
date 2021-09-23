@@ -1,0 +1,22 @@
+<h6>Dashboard</h6>
+<h3>Welcome {{name}}</h3>
+<p>Here are your summaries</p>
+{{#if summaries}}
+      {{#each summaries}}
+   
+        <p>Title:</p> {{title}}
+        <p>Quick Description:</p> {{quickDescription}}
+        <form action="/summaries/{{_id}}" method="POST" id="delete-form">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-danger">
+                        delete
+                    </button>
+                </form>
+        <br>
+      </div>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p>You have not created any summary</p>
+{{/if}}
